@@ -1,4 +1,4 @@
-public class MaxMin {
+public class MaxMin extends Utility {
 
     public int[] maxmin(int[] arr,int n){
 
@@ -25,13 +25,5 @@ public class MaxMin {
 
         return new int[]{maxe,mine};
     }
-
-    public void display(int[] arr,int n){
-        int[] res=maxmin(arr,n);
-        for(int i=0;i<res.length;i++){
-            System.out.print(" ->"+res[i]);
-        }
-    }
-
 
 }
