@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5};
@@ -25,9 +27,19 @@ public class Main {
         mv.display(res4);
 
         int[] arr4 = {12, 11, -13, -5, 6, -7, 5, -3, -6};
-        MoveNegToBeginOrderMatters mvn=new MoveNegToBeginOrderMatters();
-        int[] res5= mvn.reArrangePosNeg(arr4, arr4.length);
+        MoveNegToBeginOrderMatters mvn = new MoveNegToBeginOrderMatters();
+        int[] res5 = mvn.reArrangePosNeg(arr4, arr4.length);
         mvn.display(res5);
+
+
+        int[] arr5 = {2, 3, 1, 2, 3};
+        MultiDuplicates md = new MultiDuplicates();
+        ArrayList<Integer> res6 = md.duplicates(arr5, arr5.length);
+        md.displayArr(res6);
+
+        int[] arr6={8,4,2,1};
+        CountInversion ci=new CountInversion();
+        System.out.print(ci.inversion(arr6, arr6.length));
 
     }
 }
