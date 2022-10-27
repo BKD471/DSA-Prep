@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,7 +40,16 @@ public class Main {
 
         int[] arr6={8,4,2,1};
         CountInversion ci=new CountInversion();
-        System.out.print(ci.inversion(arr6, arr6.length));
+        System.out.println(ci.inversion(arr6, arr6.length));
 
+        int[] arr8={-2, -3, 4, -1, -2, 1, 5, -3};
+        Kadane kd=new Kadane();
+        System.out.println(kd.largestSumContiguousSubarray(arr8));
+
+
+        int[] arr10={-1,0,1,2,-1,-4};
+        ThreeSum tsm=new ThreeSum();
+        List<List<Integer>> res=tsm.threeSum(arr10);
+        tsm.displayListOfList(res);
     }
 }

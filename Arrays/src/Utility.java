@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Utility {
 
@@ -22,5 +23,18 @@ public class Utility {
         int t = arr[n];
         arr[n] = arr[m];
         arr[m] = t;
+    }
+
+    void displayListOfList(List<List<Integer>> arr){
+
+        int n= arr.size();
+        for(int i=0;i<n;i++){
+            System.out.print("[ ");
+            for(int j=0;j<arr.get(i).size();j++)
+            {
+                System.out.print(arr.get(i).get(j)+" ");
+            }
+            System.out.println("]");
+        }
     }
 }
