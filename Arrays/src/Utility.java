@@ -3,6 +3,16 @@ import java.util.List;
 
 public class Utility {
 
+
+    public void reverse(int[] arr,int l,int h){
+        while(l<h){
+            int t=arr[l];
+            arr[l]=arr[h];
+            arr[h]=t;
+            l++;
+            h--;
+        }
+    }
     public void display(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
@@ -26,7 +36,6 @@ public class Utility {
     }
 
     void displayListOfList(List<List<Integer>> arr){
-
         int n= arr.size();
         for(int i=0;i<n;i++){
             System.out.print("[ ");
