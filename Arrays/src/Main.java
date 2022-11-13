@@ -51,5 +51,26 @@ public class Main {
         ThreeSum tsm=new ThreeSum();
         List<List<Integer>> res=tsm.threeSum(arr10);
         tsm.displayListOfList(res);
+
+
+        int[] arr11={1,2,3,4,5};
+        Rotate rt=new Rotate();
+        int[] res7=rt.rotate(arr11,2);
+        rt.display(res7);
+
+
+        int[] arr12={1, 3, 2, 3, 3,9, 4, 5, 5, 6 ,8,8};
+        int[] arr13={3,3,5,6,7,6,7,9};
+        UnionAndIntersection us=new UnionAndIntersection();
+        ArrayList<Integer> res8=us.interSection(arr12,arr13);
+        ArrayList<Integer> res9=us.union(arr12,arr13);
+        us.displayArr(res8);
+        us.displayArr(res9);
+
+
+        int[] arr14={1 ,4 , 3 ,7 , 1 , 2 , 6 ,7, 6, 10};
+        MinJumps mj=new MinJumps();
+        System.out.println(mj.minJumps(arr14));
+
     }
 }
