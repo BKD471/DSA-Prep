@@ -8,11 +8,9 @@ public class MinJumps {
        int maxReach=nums[0];
        int count=1;
        for(int i=1;i<n;i++){
-
            if(nums.length-1==i) return count;
            maxReach=Math.max(maxReach,i+nums[i]);
            steps--;
-
            if(steps==0){
                count++;
                steps=maxReach-i;
