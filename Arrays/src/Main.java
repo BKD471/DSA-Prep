@@ -12,9 +12,9 @@ public class Main {
         int[] res2 = m.maxmin(arr, arr.length);
         m.display(res2);
 
-        //int arr1[]={7,10,4,3,20,15};
-        //KthLargest k=new KthLargest();
-        //k.kthmax(arr1,6,3);
+        int arr1[]={7,10,4,3,20,15};
+        KthLargest k=new KthLargest();
+        k.kthmax(arr1,6,3);
 
 
         int[] arr2 = {1, 0, 0};
