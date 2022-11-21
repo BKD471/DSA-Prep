@@ -105,5 +105,14 @@ public class Main {
         SubArrayWithZeroSum szs=new SubArrayWithZeroSum();
         System.out.println(szs.zeroSum(arr17));
 
+        int[] arr18={-5, -2, 5, 2, 4, 7, 1, 8, 0, -8};
+        RearrangePosAndNeg rpn=new RearrangePosAndNeg();
+        int[] res10=rpn.rearrange(arr18);
+        rpn.display(res10);
+
+        int[] arr19={3,1,-2,-5,2,-4};
+        RearrangePosAndNegLeetcode2149 rpnl=new RearrangePosAndNegLeetcode2149();
+        int[] res11=rpnl.rearrange(arr19);
+        rpnl.display(res11);
     }
 }
