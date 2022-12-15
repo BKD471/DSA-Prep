@@ -1,4 +1,6 @@
-class BasicRecursion  extends CodeHelper{
+import static helper.CodeHelper.*;
+
+class BasicRecursion  {
     public static void print1ToNRec(int n, int i) {
         if (i == n + 1) return;
         System.out.print(i + " ");
@@ -66,7 +68,7 @@ class BasicRecursion  extends CodeHelper{
     }
 }
 
-public class Backtrack  extends CodeHelper{
+public class Backtrack {
     public static void main(String[] args) {
         BasicRecursion.print1ToNRec(9, 1);
         System.out.println();
