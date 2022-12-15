@@ -1,4 +1,4 @@
-class BasicRecursion extends Utility {
+class BasicRecursion  extends CodeHelper{
     public static void print1ToNRec(int n, int i) {
         if (i == n + 1) return;
         System.out.print(i + " ");
@@ -45,7 +45,7 @@ class BasicRecursion extends Utility {
         if (l >= h) {
             return nums;
         }
-        swap(nums, l, h);
+        swapHelper(nums, l, h);
         return reverseRec(nums, ++l, --h);
     }
 
@@ -53,7 +53,7 @@ class BasicRecursion extends Utility {
         if (l > (n-l)) {
             return nums;
         }
-        swap(nums, l, n-l);
+        swapHelper(nums, l, n-l);
         return reverseRecOpt(nums, ++l, n);
     }
 
@@ -66,7 +66,7 @@ class BasicRecursion extends Utility {
     }
 }
 
-public class Backtrack extends Utility {
+public class Backtrack  extends CodeHelper{
     public static void main(String[] args) {
         BasicRecursion.print1ToNRec(9, 1);
         System.out.println();
@@ -82,10 +82,10 @@ public class Backtrack extends Utility {
         System.out.println();
         int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         int[] res = BasicRecursion.reverseRec(arr, 0, arr.length - 1);
-        BasicRecursion.display(res);
+        displayHelper(res);
         int[] arr1={56,78,89,90};
         int[] res1=BasicRecursion.reverseRecOpt(arr1,0,arr1.length-1);
-        BasicRecursion.display(res1);
+        displayHelper(res1);
         int[] arr2={7,8,8,8,7};
         System.out.println(BasicRecursion.pallindrome(arr2,0,arr2.length-1));
     }

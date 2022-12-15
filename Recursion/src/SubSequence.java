@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SubSequence extends Utility{
+public class SubSequence extends CodeHelper {
 
     public static void printSeq(int[] nums,ArrayList temp,int ind){
         if(ind==nums.length){

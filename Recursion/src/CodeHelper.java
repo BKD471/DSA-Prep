@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Utility {
+public class CodeHelper {
     public static void reverse(int[] arr,int l,int h){
         while(l<h){
             int t=arr[l];
@@ -11,7 +11,7 @@ public class Utility {
             h--;
         }
     }
-    public static void display(int[] arr) {
+    public static void displayHelper(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
@@ -27,7 +27,7 @@ public class Utility {
         System.out.println("");
     }
 
-    public static void swap(int[] arr, int n, int m) {
+    public static void swapHelper(int[] arr, int n, int m) {
         int t = arr[n];
         arr[n] = arr[m];
         arr[m] = t;
