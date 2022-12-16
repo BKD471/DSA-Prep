@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class SubSequence {
 
-    public static void printSeq(int[] nums,ArrayList temp,int ind){
+    public static void printSeq(int[] nums,ArrayList<Integer> temp,int ind){
         if(ind==nums.length){
             if(temp.size()==0) {
                 System.out.println("Null");
                 return;
             }
-            for(Object e:temp){
+            for(int e:temp){
                 System.out.print(e+" ");
             }
             System.out.println();
@@ -31,7 +31,7 @@ public class SubSequence {
 
     public  static  void main(String[] args){
         int[] arr={3,2,1};
-        ArrayList temp=new ArrayList<>();
+        ArrayList<Integer> temp=new ArrayList<>();
         printSeq(arr,temp,0);
     }
 }
