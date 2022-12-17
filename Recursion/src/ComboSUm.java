@@ -7,6 +7,12 @@ public class ComboSUm {
                 for(int e:temp){
                     System.out.print(e+" ");
                 }
+                System.out.println("----------------------------------->");
+                List<Integer> cpy=new ArrayList<>(temp);
+                Collections.sort(cpy);
+                for(int e:cpy){
+                    System.out.print(e+" ");
+                }
                 System.out.println();
             }
             return;
@@ -37,10 +43,17 @@ public class ComboSUm {
     }
 
     public  static void main(String[] args){
-        int[] arr={2,2,6,3,7};
-        int target=7;
+        int[] arr={2,5,2,1,2};
+        int target=5;
         ArrayList<Integer> temp=new ArrayList();
         comboSum(arr,0,temp,target,0);
-        System.out.println(countComboSum(arr,0,target,0));
+        //System.out.println(countComboSum(arr,0,target,0));
+
+        ArrayList<Integer> arrays=new ArrayList<Integer>();
+
+        Set<List<Integer>> s=new HashSet<>();
+
+       // s.toArray()
+
     }
 }
