@@ -1,14 +1,11 @@
 import java.util.*;
-
 import static helper.CodeHelper.displayListOfList;
 
 class Solution1 {
     public static void comboSum(int[] arr,Set<List<Integer>> res, List<Integer> temp,int index,int target){
         if(index==arr.length){
             if(target==0){
-
                 List<Integer> cpy=new ArrayList(temp);
-
                 Collections.sort(cpy);
                 res.add(new ArrayList(cpy));
             }
@@ -27,7 +24,6 @@ class Solution1 {
         List<List<Integer>> result=new ArrayList();
         Iterator itr=  res.iterator();
         while(itr.hasNext()){
-            List<Integer> op=new ArrayList();
             List tempSet= (List) itr.next();
             result.add(tempSet);
         }

@@ -21,7 +21,6 @@ class Solution3 {
     }
 
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
-
         Arrays.sort(candidates);
         List<List<Integer>> res=new ArrayList<>();
         List<Integer> temp=new ArrayList<>();
