@@ -1,30 +1,24 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static helper.CodeHelper.displayList;
 
 public class SubSetSums {
-    public static void sumSet(int[] nums, List<Integer> res,List<Integer> temp,int index){
+    public static void sumSet(int[] nums, List<Integer> res,int index,int sum){
            if(index==nums.length){
-               int sum=0;
-               for(int e:temp){
-                   sum+=e;
-               }
                res.add(sum);
                return;
            }
-
-           temp.add(nums[index]);
-           sumSet(nums,res,temp,index+1);
-           temp.remove(temp.size()-1);
-           sumSet(nums,res,temp,index+1);
+           sumSet(nums,res,index+1,sum+nums[index]);
+           sumSet(nums,res,index+1,sum);
     }
 
     public static void main(String[] args) {
         int[] arr={2,3};
         List<Integer> res=new ArrayList<>();
-        List<Integer> temp=new ArrayList<>();
-        sumSet(arr,res,temp,0);
+        sumSet(arr,res,0,0);
+        Collections.sort(res);
         displayList(res);
     }
 
