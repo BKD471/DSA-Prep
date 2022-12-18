@@ -24,7 +24,7 @@ class Solution4 {
         return res;
     }
 }
-public class SubSet2 {
+public class SubSet2LC90 {
     public static void main(String[] args) {
          int[] arr={1,2,2,2,3,3};
          List<List<Integer>> res=Solution4.subsetsWithDup(arr);
