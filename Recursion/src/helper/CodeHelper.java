@@ -1,6 +1,5 @@
 package helper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CodeHelper {
@@ -21,7 +20,7 @@ public class CodeHelper {
         System.out.println("");
     }
 
-    public static void displayArr(ArrayList<Integer> arr) {
+    public static void displayList(List<Integer> arr) {
         int n = arr.size();
         for (int i = 0; i < n; i++) {
             System.out.print(arr.get(i) + " ");
