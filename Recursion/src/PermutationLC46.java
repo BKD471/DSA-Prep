@@ -8,7 +8,7 @@ import static helper.CodeHelper.displayListOfList;
 class Solution6 {
     public static void permutation(int[] nums, List<Integer> temp, List<List<Integer>> res, Map<Integer, Integer> mp) {
         if (temp.size() == nums.length) {
-            System.out.println(temp);
+            //System.out.println(temp);
             res.add(new ArrayList<>(temp));
             return;
         }
