@@ -1,7 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import static helper.CodeHelper.displayListOfList;
+import java.util.Map;
 
 class Solution5 {
     public static void subSets(List<List<Integer>> res, List<Integer> temp, int index, int[] nums){
@@ -31,6 +31,14 @@ public class SubSetLC78 {
         List<List<Integer>> res=new ArrayList<>();
         List<Integer> temp=new ArrayList<>();
         List<List<Integer>> ans=Solution5.subsets(arr);
-        displayListOfList(ans);
+        //displayListOfList(ans);
+
+        Map<Integer,Integer> mp=new HashMap<>();
+        mp.put(2,1);
+        mp.remove(2);
+
+        System.out.println(mp);
+        //System.out.println(mp.get(3));
+        //System.out.println(k);
     }
 }
