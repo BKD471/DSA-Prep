@@ -22,7 +22,6 @@ class Solution6 {
             }
         }
     }
-
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
@@ -31,8 +30,6 @@ class Solution6 {
         return res;
     }
 }
-
-
 public class PermutationLC46 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3};
