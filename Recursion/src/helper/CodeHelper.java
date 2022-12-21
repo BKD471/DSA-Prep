@@ -46,6 +46,19 @@ public class CodeHelper {
         }
     }
 
+
+    public static void displayListOfListString(List<List<String>> arr){
+        int n= arr.size();
+        for(int i=0;i<n;i++){
+            System.out.print("[ ");
+            for(int j=0;j<arr.get(i).size();j++)
+            {
+                System.out.print(arr.get(i).get(j)+" ");
+            }
+            System.out.println("]");
+        }
+    }
+
     public static int binarySearch(int[] nums,int key){
         int l=0,h=nums.length-1;
         while(l<=h){
