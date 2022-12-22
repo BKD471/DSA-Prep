@@ -71,12 +71,8 @@ class Solution8 {
         return res;
     }
 }
-
-
-
 public class Nqueen {
     public static void main(String[] args) {
-
         int n=4;
         List<List<String>> res=Solution8.solveNQueens(n);
         displayListOfListString(res);
