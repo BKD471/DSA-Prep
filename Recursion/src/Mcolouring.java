@@ -30,7 +30,15 @@ class Solve {
     public static boolean graphColoring(boolean graph[][], int m, int n) {
         int[] colors=new int[n];
         Arrays.fill(colors,0);
-        return solve(graph,colors,0,m,n);
+
+        boolean res= solve(graph,colors,0,m,n);
+
+        System.out.println("Printing the color sequence ----->");
+        for(int i=0;i<n;i++){
+            System.out.print("--->"+colors[i]);
+        }
+        System.out.println();
+        return res;
     }
 }
 
@@ -53,7 +61,9 @@ public class Mcolouring {
                 graph[u][v]=true;// give it true on both u->v & v->u
                 graph[v][u]=true;// denoting edge exists between the node 1 & 2
             }
-            System.out.println(new Solve().graphColoring(graph,m,n)? 1: 0);
+            System.out.println(new Solve().graphColoring(graph,m,n)? "Yes the graph can be coloured": "No graph cant be coloured");
         }
     }
 }
+// Tc -> N^m   for verey nodes we are trying m colors
+//
