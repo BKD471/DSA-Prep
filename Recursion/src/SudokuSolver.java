@@ -1,4 +1,3 @@
-
 class Solution9 {
     public static void solveSudoku(char[][] board) {
         solve(board);
@@ -44,7 +43,6 @@ public class SudokuSolver {
                 {'.', '6', '.', '.', '.', '.', '2', '8', '.'}, {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
         Solution9.solveSudoku(board);
-
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++)
                 System.out.print(board[i][j] + " ");
