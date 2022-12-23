@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static helper.CodeHelper.displayListOfList;
 
@@ -36,7 +33,7 @@ public class PermutationLC46 {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
         Map<Integer, Integer> hash = new HashMap<>();
-        List<List<Integer>> o = Solution6.permute(arr);
+        List<List<?>> o = Collections.singletonList(Solution6.permute(arr));
         displayListOfList(o);
     }
 }

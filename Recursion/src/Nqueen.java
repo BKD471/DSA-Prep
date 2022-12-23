@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import static helper.CodeHelper.displayListOfListString;
+import static helper.CodeHelper.displayListOfList;
 
 class Solution8 {
     public static boolean isValidMove(int row,int col,char[][] board,int n){
@@ -74,7 +75,7 @@ class Solution8 {
 public class Nqueen {
     public static void main(String[] args) {
         int n=4;
-        List<List<String>> res=Solution8.solveNQueens(n);
-        displayListOfListString(res);
+        List<List<?>> res= Collections.singletonList(Solution8.solveNQueens(n));
+        displayListOfList(res);
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Arrays;
 
@@ -27,7 +28,7 @@ class Solution4 {
 public class SubSet2LC90 {
     public static void main(String[] args) {
          int[] arr={1,2,2,2,3,3};
-         List<List<Integer>> res=Solution4.subsetsWithDup(arr);
+         List<List<?>> res= Collections.singletonList(Solution4.subsetsWithDup(arr));
          displayListOfList(res);
     }
 }

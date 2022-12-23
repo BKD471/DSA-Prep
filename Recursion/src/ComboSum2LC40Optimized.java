@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static helper.CodeHelper.displayListOfList;
@@ -33,7 +34,7 @@ public class ComboSum2LC40Optimized {
     public static void main(String[] args) {
         int[] arr={2,5,2,1,7,1};
         int target=8;
-        List<List<Integer>> res1=Solution3.combinationSum2(arr,target);
+        List<List<?>> res1= Collections.singletonList(Solution3.combinationSum2(arr, target));
         displayListOfList(res1);
     }
 }

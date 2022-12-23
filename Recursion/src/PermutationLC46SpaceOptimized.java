@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static helper.CodeHelper.displayListOfList;
@@ -32,7 +33,7 @@ public class PermutationLC46SpaceOptimized {
 
     public static void main(String[] args) {
         int[] arr={1,2,3};
-        List<List<Integer>> res=Solution7.permute(arr);
+        List<List<?>> res= Collections.singletonList(Solution7.permute(arr));
         displayListOfList(res);
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static helper.CodeHelper.displayListOfList;
@@ -36,7 +37,7 @@ public class ComboSumLC39 {
     public static void main(String[] args) {
         int[] arr={2,3,6,7};
         int target=7;
-        List<List<Integer>> result=Solution.combinationSum(arr,target);
+        List<List<?>> result= Collections.singletonList(Solution.combinationSum(arr, target));
         displayListOfList(result);
     }
 }

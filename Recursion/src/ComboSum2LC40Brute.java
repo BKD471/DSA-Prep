@@ -37,7 +37,7 @@ public class ComboSum2LC40Brute {
 
         int[] arr={2,5,2,1,2};
         int target=5;
-        List<List<Integer>> res1=Solution1.combinationSum2(arr,target);
+        List<List<?>> res1= Collections.singletonList(Solution1.combinationSum2(arr, target));
         displayListOfList(res1);
     }
 }
