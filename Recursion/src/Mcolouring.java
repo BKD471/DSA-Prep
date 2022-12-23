@@ -65,5 +65,5 @@ public class Mcolouring {
         }
     }
 }
-// Tc -> N^m   for verey nodes we are trying m colors
-//
+// Tc -> O(N^m)   for every nodes N we are trying m colors
+// Sc-> O(#nodes)
