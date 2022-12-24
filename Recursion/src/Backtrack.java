@@ -84,10 +84,10 @@ public class Backtrack {
         System.out.println();
         int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
         int[] res = BasicRecursion.reverseRec(arr, 0, arr.length - 1);
-        displayHelper(res);
+        displayArrHelper(res);
         int[] arr1={56,78,89,90};
         int[] res1=BasicRecursion.reverseRecOpt(arr1,0,arr1.length-1);
-        displayHelper(res1);
+        displayArrHelper(res1);
         int[] arr2={7,8,8,8,7};
         System.out.println(BasicRecursion.pallindrome(arr2,0,arr2.length-1));
     }

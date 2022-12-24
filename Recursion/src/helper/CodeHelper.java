@@ -12,7 +12,7 @@ public class CodeHelper {
             h--;
         }
     }
-    public static void displayHelper(int[] arr) {
+    public static void displayArrHelper(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
