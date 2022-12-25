@@ -20,7 +20,7 @@ public class CodeHelper {
         System.out.println("");
     }
 
-    public static void displayList(List<Integer> arr) {
+    public static void displayList(List<?> arr) {
         int n = arr.size();
         for (int i = 0; i < n; i++) {
             System.out.print(arr.get(i) + " ");
