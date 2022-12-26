@@ -1,10 +1,12 @@
 import java.util.Arrays;
 class Solution15 {
     public static boolean solve(char[][] board,boolean[][] visited,
-                         String word,String temp,int row,int col,int m,int n,int len,int index){
+                         String word,int m,int n,int len){
+
+        int index=0;
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                if(board[i][j]==word.charAt(0)
+                if(board[i][j]==word.charAt(index)
                         && lookUp(i,j,word,board,visited,1,len,m,n))
                     return true;
             }
@@ -60,14 +62,9 @@ class Solution15 {
             Arrays.fill(temp,false);
         }
         int n=word.length();
-        return solve(board,visited,word,"",0,0,row,col,n,0);
+        return solve(board,visited,word,row,col,n);
     }
 }
-
-
-
-
-
 
 public class WordSearch {
     public static void main(String[] args) {
