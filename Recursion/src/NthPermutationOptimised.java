@@ -23,11 +23,11 @@ class Solution14 {
     }
 }
 
-
-
 public class NthPermutationOptimised {
     public static void main(String[] args) {
         int n=4, k=15;
         System.out.println(Solution14.getPermutation(n,k));
     }
 }
+
+//TC -> O(n^2)
