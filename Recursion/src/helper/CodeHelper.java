@@ -20,6 +20,18 @@ public class CodeHelper {
         System.out.println("");
     }
 
+    public static void displayArrOfArrHelper(int[][] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            System.out.print("[");
+            for(int j=0;j<arr[i].length;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println("]");
+        }
+        System.out.println("");
+    }
+
     public static void displayList(List<?> arr) {
         int n = arr.size();
         for (int i = 0; i < n; i++) {
