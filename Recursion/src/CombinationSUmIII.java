@@ -34,6 +34,6 @@ class Solution24 {
 public class CombinationSUmIII {
     public static void main(String[] args) {
         List<List<Integer>> res=Solution24.combinationSum3(3,7);
-        res.forEach(t-> System.out.println(res));
+        res.forEach(t-> System.out.println(t));
     }
 }
