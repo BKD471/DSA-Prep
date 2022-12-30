@@ -12,7 +12,7 @@ class Solution24 {
         //target has gone below 0 i.e we have excedded the target and solution not found
         if(target<0 || size<0) return;
 
-        //We have finsihed searching through entire nos from [1-9] still target is non zero so quit
+        //We have finsihed searching through entire nos from [1-9] still target is non zero i.e we haven't found it,so quit
         if(index==nums.length) return;
 
         temp.add(nums[index]);
