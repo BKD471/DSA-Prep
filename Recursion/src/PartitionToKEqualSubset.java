@@ -45,6 +45,7 @@ class Solution27 {
 
 public class PartitionToKEqualSubset {
     public static void main(String[] args) {
-
+        int[] nums={4,3,2,3,5,2,1};
+        System.out.println(Solution27.canPartitionKSubsets(nums,4));
     }
 }
