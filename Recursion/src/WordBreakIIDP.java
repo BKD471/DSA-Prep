@@ -29,7 +29,7 @@ class Solution38 {
     }
 
     public static List<String> wordBreak(String s, List<String> wordDict) {
-        HashSet<String> hs=new HashSet<>(wordDict);
+        HashSet<String> hs=new HashSet<>(wordDict);// convert to set for easiness in searching
         HashMap<Integer,List<String>> memo=new HashMap<>();
         return solve(s,hs,0,memo);
     }

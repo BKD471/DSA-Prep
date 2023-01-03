@@ -19,7 +19,7 @@ class Solution35 {
         return false;
     }
     public static boolean wordBreak(String s, List<String> wordDict) {
-        HashSet<String> hs=new HashSet<>(wordDict);
+        HashSet<String> hs=new HashSet<>(wordDict);// convert to set for easiness in searching
         return solve(s,hs,0);
     }
 }
