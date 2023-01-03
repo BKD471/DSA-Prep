@@ -16,12 +16,10 @@ class Solution36 {
             String prefix=s.substring(index,i);
             if(set.contains(prefix)){
                 if(solve(s,set,i,memo)){
-                    memo.put(index,true);
                     return true;
                 }
             }
         }
-
 
         memo.put(index,false);
         return false;
