@@ -27,6 +27,7 @@ class Solution36 {
     public static boolean wordBreak(String s, List<String> wordDict) {
         HashSet<String> hs=new HashSet<>(wordDict);// convert to set for easiness in searching
         HashMap<Integer,Boolean> memo=new HashMap<>();
+
         return solve(s,hs,0,memo);
     }
 }
@@ -35,7 +36,7 @@ class Solution36 {
 
 public class WordBreakDP {
     public static void main(String[] args) {
-        String s="pineapplepenapple";
+        String s="pineapplepenapples";
         List<String> serach=new ArrayList<>();
         serach.add("apple");serach.add("pen");serach.add("applepen");
         serach.add("pine");serach.add("pineapple");
