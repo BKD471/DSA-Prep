@@ -31,5 +31,6 @@ public class FrogJumpKdistancesMemoized {
         int[] memo = new int[size];
         Arrays.fill(memo, -1);
         System.out.println(Frog.distance(steps, k, size - 1, memo));
+        sc.close();
     }
 }

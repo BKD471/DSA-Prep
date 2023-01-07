@@ -33,5 +33,6 @@ public class FrogJumpKDistanceTabulation {
         }
         int[] memo = new int[size];
         System.out.println(Frogs.jumps(steps, k));
+        sc.close();
     }
 }
