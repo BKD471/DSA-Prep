@@ -11,8 +11,9 @@ class Solution7 {
 
         //inserting all elements in hash
         //mapped  value for a particular stone in hash is a set
-        //representing all the possible jumps made to get to that stone
+        //this set will contain all the possible jumps made to get to that stone
         for(int i=0;i<n;i++){
+            //intializing  every stones with an empty set
             hash.put(stones[i],new HashSet<Integer>());
         }
 
