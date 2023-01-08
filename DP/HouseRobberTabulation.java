@@ -6,7 +6,7 @@ class Solution9 {
         dp[0]=nums[0];
         for(int i=1;i<n;i++){
             int take=nums[i];
-            //Edge case ,if i=1 then (i-2) will be f(-1) which must return 0
+            //Edge case ,if i=1 then (i-2) will leads to dp[-1] which sould be avoided
             if(i>1) take+=dp[i-2];
             int non_take=dp[i-1];
 
