@@ -5,8 +5,7 @@ public class RodCutting {
 
         if(index==0){
             if(weight>=(index+1)){
-                int quantity=(int)(weight/(index+1));
-                return quantity*price[index];
+                return weight*price[index];
             }
             return 0;
         }
