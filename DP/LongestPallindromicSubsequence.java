@@ -17,6 +17,9 @@ public class LongestPallindromicSubsequence {
         }
     }
     public int longestPalindromeSubseq(String s) {
+        //find lcs between the string and its reversed version
+        //this will guratee that lcs between them is always a pallindrome
+        //such a cynical idea :)
         StringBuilder sb=new StringBuilder(s);
         String s1=sb.reverse().toString();
 

@@ -24,6 +24,10 @@ public class MinOpsToTransformMemo {
         int[][] memo=new int[m][n];
         for(int i=0;i<m;i++) Arrays.fill(memo[i],-1);
 
+        //To tansform one string to another
+        //first calculate the common portion/ longest common subseq between them
+        // that will be constant , subtract it from two  to get the final amnt
+        //GENIUS :)
         int lc=lcs(s,s1,m-1,n-1,memo);
         return (m-lc)+(n-lc);
 
