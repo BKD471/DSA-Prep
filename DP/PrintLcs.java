@@ -50,8 +50,8 @@ public class PrintLcs {
     public static void main(String[] args) {
 //        String s="abcdef";
 //        String s2="bjkdef";
-        String s="abcde";
-        String s1="bdgek";
+        String s="abcdefgh";
+        String s1="abercdefg";
         System.out.println(PrintLcs.printLcs(s,s1));
     }
 }
