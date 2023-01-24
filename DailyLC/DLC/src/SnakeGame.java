@@ -37,7 +37,10 @@ public class SnakeGame {
     public  int[] findCoordinates(int x,int n){
         int row=n-(x-1)/n-1;
         int col=(x-1)%n;
+          //this is the only tricky part
 
+        //if both row and length of matrix is either odd or even then return col= n-1-col
+        // see the board to understand why is this
         if(n%2==row%2) return new int[]{row,n-1-col};
         else return new int[]{row,col};
     }
