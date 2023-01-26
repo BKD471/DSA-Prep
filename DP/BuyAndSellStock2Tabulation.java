@@ -1,21 +1,21 @@
 //Just same approch like done during memoization
 
 //Here in this problem we are allowed to do multiple transactions
-//but the condition is that you have to sell your holdings before you another stock
+//but the condition is that we have to sell your holdings before we another stock
 
-//this problem can be visualized as  are you able to buy or not
-//a)if you have already bought,
-// you have two options either sell it or hold it
-//1)if you sell, you will be free to buy again in future indexes
-//2) if you dont then you can't buy
+//this problem can be visualized as  are we able to buy or not
+//a)if we have already bought,
+// we have two options either sell it or hold it
+//1)if we sell, we will be free to buy again in future indexes
+//2) if we dont then you can't buy
 
 
-//b)if you have sold or yet to buy anything. you have furhtur two options
-// 1) buy it, if you buy  you have to sell it before buying again
-//2) dont buy it, you are free to do buy in future indexes
+//b)if we have sold or yet to buy anything. we have furhtur two options
+// 1) buy it, if we buy  we have to sell it before buying again
+//2) dont buy it, we are free to do buy in future indexes
 
 // just take two indexes,one  denoting  the index of prices arr
-// and other denoting have you bought or not.
+// and other denoting have we bought or not.
 
 
 public class BuyAndSellStock2Tabulation {
