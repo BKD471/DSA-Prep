@@ -19,15 +19,14 @@ public class BestTimeToBuyAndSellStockSpaceOptimized {
     public int maxProfit(int[] prices) {
         int n=prices.length;
         int prevBuy=0,prevNotBuy=0;
-        int currBuy,currNotBuy;
 
         for(int index=n-1;index>=0;index--){
             int buy=-prices[index]+prevNotBuy;
             int not_buy=prevBuy;
-            currBuy=Math.max(buy,not_buy);
+            int currBuy=Math.max(buy,not_buy);
             int sell=prices[index]+prevBuy;
             int not_sell=prevNotBuy;
-            currNotBuy=Math.max(sell,not_sell);
+            int currNotBuy=Math.max(sell,not_sell);
 
             prevBuy=currBuy;
             prevNotBuy=currNotBuy;
