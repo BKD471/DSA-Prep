@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class PrintLis {
-    public static List<String> lengthOfLIS(int[] nums) {
+    public static List<Integer> lengthOfLIS(int[] nums) {
         int n=nums.length;
         int[] dp=new int[n];
         int[] tracker=new int[n];
@@ -32,12 +32,12 @@ public class PrintLis {
             }
         }
 
-        ArrayList<String> temp=new ArrayList<String>();
-        temp.add(String.valueOf(nums[mxIndex]));
+        ArrayList<Integer> temp=new ArrayList<Integer>();
+        temp.add(nums[mxIndex]);
 
         while(tracker[mxIndex]!=mxIndex){
             mxIndex=tracker[mxIndex];
-            temp.add(String.valueOf(nums[mxIndex]));
+            temp.add(nums[mxIndex]);
         }
 
         Collections.reverse(temp);
