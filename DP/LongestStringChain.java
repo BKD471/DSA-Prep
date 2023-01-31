@@ -11,11 +11,14 @@ public class LongestStringChain {
 
         int i=0,j=0;
         while(i<m){
-            if(j<n && t1.charAt(i)==t2.charAt(j)){
+            if(j==n) break;
+            if(t1.charAt(i)==t2.charAt(j)){
                 i++;
                 j++;
             }else i++;
         }
+
+        if(i+1==m) return true;
 
         if(i==m && j==n) return true;
         return false;
