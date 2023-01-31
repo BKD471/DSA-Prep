@@ -17,7 +17,8 @@ public class LongestStringChain {
                 j++;
             }else i++;
         }
-
+        //it means second string is exhausted and new string
+        //has stiill one remaining character
         if(i+1==m) return true;
 
         if(i==m && j==n) return true;
