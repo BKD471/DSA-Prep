@@ -1,9 +1,12 @@
 import java.util.Arrays;
 
 public class MinRemovalToLongMountain {
-    public int[] lis(int startIndex,int endIndex,int[] nums,int[] dp){
+    public int[] lis(int startIndex,int endIndex,int[] nums){
         int n=nums.length;
         int mx=Integer.MIN_VALUE;
+
+        int[] dp=new int[n];
+        Arrays.fill(dp,1);
 
         if(startIndex==0){
             //this is for frontLis
@@ -36,8 +39,8 @@ public class MinRemovalToLongMountain {
         Arrays.fill(backLis,1);
 
 
-        int[] frontLisDp=lis(0,n,nums,frontLis);
-        int[] backLisDp=lis(n-1,0,nums,backLis);
+        int[] frontLisDp=lis(0,n,nums);
+        int[] backLisDp=lis(n-1,0,nums);
 
         int mx=Integer.MIN_VALUE;
         //frontLisDp[i]=1 || backLisDp[i]=1  means no increasing seq has been found till that index i

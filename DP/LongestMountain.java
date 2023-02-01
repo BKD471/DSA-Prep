@@ -1,9 +1,12 @@
 import java.util.Arrays;
 
 public class LongestMountain {
-    public int[] lis(int startIndex,int endIndex,int[] nums,int[] dp){
+    public int[] lis(int startIndex,int endIndex,int[] nums){
         int n=nums.length;
         int mx=Integer.MIN_VALUE;
+
+        int[] dp=new int[n];
+        Arrays.fill(dp,1);
 
         if(startIndex==0){
             //for front lis
@@ -32,8 +35,8 @@ public class LongestMountain {
         Arrays.fill(backLis,1);
 
 
-        int[] frontLisDp=lis(0,n,arr,frontLis);
-        int[] backLisDp=lis(n-1,0,arr,backLis);
+        int[] frontLisDp=lis(0,n,arr);
+        int[] backLisDp=lis(n-1,0,arr);
 
         //frontLisDp[i]=1 or backLisDp[i]=1  means no increasing seq has been found till that index i
         //so if both are 1 i.e  not changed  means no mountain can be made in that area
