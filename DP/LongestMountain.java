@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class LongestMountain {
     public int[] lis(int startIndex,int endIndex,int[] nums){
         int n=nums.length;
-        int mx=Integer.MIN_VALUE;
 
         int[] dp=new int[n];
         Arrays.fill(dp,1);
