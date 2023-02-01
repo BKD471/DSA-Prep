@@ -35,6 +35,8 @@ public class LongestMountain {
         int[] frontLisDp=lis(0,n,arr,frontLis);
         int[] backLisDp=lis(n-1,0,arr,backLis);
 
+        //frontLisDp[i]=1 or backLisDp[i]=1  means no increasing seq has been found till that index i
+        //so if both are 1 i.e  not changed  means no mountain can be made in that area
         int mx=Integer.MIN_VALUE;
         for(int i=0;i<n;i++){
             if(frontLisDp[i]!=1 && backLisDp[i]!=1){

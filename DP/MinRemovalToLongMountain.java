@@ -40,6 +40,8 @@ public class MinRemovalToLongMountain {
         int[] backLisDp=lis(n-1,0,nums,backLis);
 
         int mx=Integer.MIN_VALUE;
+        //frontLisDp[i]=1 || backLisDp[i]=1  means no increasing seq has been found till that index i
+        //so if both are at 1 i.e not changed means no mountain can be made in that area
         for(int i=0;i<n;i++){
             if(frontLisDp[i]!=1 && backLisDp[i]!=1){
                 mx=Math.max(frontLisDp[i]+backLisDp[i]-1,mx);
