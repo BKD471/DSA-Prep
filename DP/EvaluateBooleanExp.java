@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class EvaluateBooleanExp {
     static long mod=(long)(Math.pow(10,9)+7);
     public static long countExp(String exp,int l,int h,int isTrue,long[][][] memo){
-
+        if(l>h) return 0;
         if(l==h){
             if(isTrue==1){
                 if(exp.charAt(h)=='T') return 1;
