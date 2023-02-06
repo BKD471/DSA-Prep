@@ -7,8 +7,9 @@ public class MCMTabulation {
 
 
         for (int front = N - 1; front >= 1; front--) {
-            for (int back = front + 1; back < N; back++) {
+            for (int back = 1; back < N; back++) {
                 int mnSteps = Integer.MAX_VALUE;
+                if(front==back) continue;
                 for (int k = front; k <= back - 1; k++) {
                     int steps = arr[front - 1] * arr[k] * arr[back] + dp[front][k] + dp[k + 1][back];
                     mnSteps = Math.min(steps, mnSteps);
