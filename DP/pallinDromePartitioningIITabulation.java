@@ -22,7 +22,6 @@ public class pallinDromePartitioningIITabulation {
                     int count=1+dp[start+1];
                     minCount=Math.min(count,minCount);
                 }
-
             }
             dp[part]=minCount;
         }

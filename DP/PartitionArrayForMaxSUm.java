@@ -4,7 +4,6 @@ public class PartitionArrayForMaxSUm {
     public int partMax(int[] arr,int index,int k,int[] memo){
 
         if(index>=arr.length) return 0;
-
         if(memo[index]!=-1) return memo[index];
 
         int maxe=Integer.MIN_VALUE, maxSum=Integer.MIN_VALUE;
@@ -17,11 +16,9 @@ public class PartitionArrayForMaxSUm {
         return memo[index]=maxSum;
     }
     public int maxSumAfterPartitioning(int[] arr, int k) {
-
         int n=arr.length;
         int[] memo=new int[n];
         Arrays.fill(memo,-1);
-
         return partMax(arr,0,k,memo);
     }
 }
