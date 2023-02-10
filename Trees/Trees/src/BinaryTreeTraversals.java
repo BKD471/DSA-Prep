@@ -15,7 +15,7 @@ class Node {
 
 public class BinaryTreeTraversals {
 
-    public static void inOrderTraversal(Node root){
+    public static void inOrderTraversals(Node root){
         if(root==null) return;
 
         inOrderTraversal(root.left);
@@ -23,7 +23,7 @@ public class BinaryTreeTraversals {
         inOrderTraversal(root.right);
     }
 
-    public static void preOrderTraversal(Node root){
+    public static void preOrderTraversals(Node root){
         if(root==null) return;
 
         System.out.print(root.val+" ");
@@ -31,7 +31,7 @@ public class BinaryTreeTraversals {
         preOrderTraversal(root.right);
     }
 
-    public static void postOrderTraversal(Node root){
+    public static void postOrderTraversals(Node root){
         if(root==null) return;
 
         postOrderTraversal(root.left);
@@ -39,7 +39,7 @@ public class BinaryTreeTraversals {
         System.out.print(root.val+" ");
     }
 
-    public static void levelOrderTraversal(Node root){
+    public static void levelOrderTraversals(Node root){
         if(root==null) return;
         Queue<Node> q=new LinkedList<>();
         q.add(root);
@@ -68,13 +68,13 @@ public class BinaryTreeTraversals {
         n2.right=n5;
         n3.left=n6;
         n3.right=n7;
-        inOrderTraversal(n1);
+        inOrderTraversals(n1);
         System.out.println();
-        preOrderTraversal(n1);
+        preOrderTraversals(n1);
         System.out.println();
-        postOrderTraversal(n1);
+        postOrderTraversals(n1);
         System.out.println();
-        levelOrderTraversal(n1);
+        levelOrderTraversals(n1);
 
     }
 }
