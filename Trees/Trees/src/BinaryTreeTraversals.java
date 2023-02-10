@@ -18,24 +18,24 @@ public class BinaryTreeTraversals {
     public static void inOrderTraversals(Node root){
         if(root==null) return;
 
-        inOrderTraversal(root.left);
+        inOrderTraversals(root.left);
         System.out.print(root.val+" ");
-        inOrderTraversal(root.right);
+        inOrderTraversals(root.right);
     }
 
     public static void preOrderTraversals(Node root){
         if(root==null) return;
 
         System.out.print(root.val+" ");
-        preOrderTraversal(root.left);
-        preOrderTraversal(root.right);
+        preOrderTraversals(root.left);
+        preOrderTraversals(root.right);
     }
 
     public static void postOrderTraversals(Node root){
         if(root==null) return;
 
-        postOrderTraversal(root.left);
-        postOrderTraversal(root.right);
+        postOrderTraversals(root.left);
+        postOrderTraversals(root.right);
         System.out.print(root.val+" ");
     }
 
