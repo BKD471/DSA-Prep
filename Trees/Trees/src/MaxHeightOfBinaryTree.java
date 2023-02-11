@@ -1,4 +1,3 @@
-
 class TreeNode{
     int val;
     TreeNode left;
@@ -11,8 +10,6 @@ class TreeNode{
     }
 
 }
-
-
 
 public class MaxHeightOfBinaryTree {
     public int findMaxHeight(TreeNode root){
