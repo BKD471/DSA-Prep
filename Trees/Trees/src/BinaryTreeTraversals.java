@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 class Node {
     int val;
@@ -21,6 +20,72 @@ public class BinaryTreeTraversals {
         inOrderTraversals(root.left);
         System.out.print(root.val+" ");
         inOrderTraversals(root.right);
+    }
+
+    public static void inOrderTraversalsIterative(Node root){
+        if(root==null) return;
+        List<Integer> res=new ArrayList<>();
+        Stack<Node> st=new Stack<>();
+
+        while(true){
+            if(root!=null){
+                st.push(root);
+                root=root.left;
+            }else{
+                if(st.empty()==true) break;
+                Node top=st.peek();
+                st.pop();
+                res.add(top.val);
+                root=top.right;
+
+            }
+        }
+
+        System.out.println(res);
+    }
+
+
+    public static void preOrderTraversalsIterative(Node root){
+        if(root==null) return;
+        List<Integer> res=new ArrayList<>();
+        Stack<Node> st=new Stack<>();
+        st.push(root);
+
+
+        while(!st.empty()){
+            Node top=st.peek();
+            st.pop();
+            res.add(top.val);
+            if(top.right!=null) st.push(top.right);
+            if(top.left!=null) st.push(top.left);
+
+        }
+        System.out.println(res);
+    }
+
+    public static void  postOrderTraversalIterative(Node root){
+        if(root==null) return;
+
+        Stack<Node> st1=new Stack<>();
+        Stack<Node> st2=new Stack<>();
+        List<Integer> res=new ArrayList<>();
+
+        st1.push(root);
+        while(!st1.empty()){
+
+            Node temp=st1.peek();
+            st1.pop();
+            st2.push(temp);
+            if(temp.left!=null) st1.push(temp.left);
+            if(temp.right!=null) st1.push(temp.right);
+        }
+
+        while(!st2.empty()){
+            Node temp=st2.peek();
+            st2.pop();
+            res.add(temp.val);
+        }
+        System.out.println(res);
     }
 
     public static void preOrderTraversals(Node root){
@@ -75,6 +140,12 @@ public class BinaryTreeTraversals {
         postOrderTraversals(n1);
         System.out.println();
         levelOrderTraversals(n1);
+        System.out.println();
+        inOrderTraversalsIterative(n1);
+        System.out.println();
+        preOrderTraversalsIterative(n1);
+        System.out.println();
+        postOrderTraversalIterative(n1);
 
     }
 }
