@@ -10,7 +10,6 @@ class Pairss{
     public int getLine(){
         return this.line;
     }
-
     public Node getNode(){
         return this.node;
     }

@@ -9,15 +9,12 @@ class Pair{
         this.horizontal=horizontal;
         this.node=node;
     }
-
     public TreeNode getNode(){
         return this.node;
     }
-
     public int getVertical(){
         return this.vertical;
     }
-
     public int getHorizontal(){
         return this.horizontal;
     }
@@ -60,7 +57,6 @@ public class VerticalView {
                 if(tempNode.right!=null) q.offer(new Pair(tempNode.right,tempVertical+1,tempHorizontal+1));
 
             }
-
 
             for(TreeMap<Integer,List<Integer>> entry:tmp.values()){
                 List<Integer> tempList=new ArrayList<>();
