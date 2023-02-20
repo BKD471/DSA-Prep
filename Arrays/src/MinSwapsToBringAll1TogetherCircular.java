@@ -1,4 +1,4 @@
-public class MinSwapsToBringAll1Together {
+public class MinSwapsToBringAll1TogetherCircular {
     public int minSwaps(int[] nums) {
         int n=nums.length;
         int[] temp=new int[2*n];
