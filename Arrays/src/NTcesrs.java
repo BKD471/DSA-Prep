@@ -1,4 +1,5 @@
-public class NBhikaris {
+//public class NBhikaris {
+public class NTcesrs{
         public int[] solve(int A, int[][] B) {
             int n=B.length;
             int[] res=new int[A];
