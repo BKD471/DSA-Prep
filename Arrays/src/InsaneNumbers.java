@@ -1,6 +1,6 @@
 public class InsaneNumbers {
     public static final int LIMIT1=(int)Math.pow(10,9)+7;
-    public static final int LIMIT2=(int)Math.pow(10,9)+6;
+    public static final int LIMIT2=LIMIT1-1;
     public long fact(int B){
 
         long ft=1;
