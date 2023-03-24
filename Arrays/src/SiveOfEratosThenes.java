@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SiveOfEratosThenes {
     public int countPrimes(int n) {
         if(n==0 || n==1 || n==2) return 0;
