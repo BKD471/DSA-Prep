@@ -20,7 +20,6 @@ public class Parenthesis {
             solve(n,open,close+1,res,temp);
             temp.remove(temp.size()-1);
         }
-
     }
     public String[] generateParenthesis(int A) {
         List<String> res=new ArrayList<>();
