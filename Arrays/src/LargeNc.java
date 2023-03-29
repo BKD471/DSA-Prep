@@ -1,4 +1,4 @@
-public class LargeNcR {
+class largeNc {
         public long factorial(long n,long p){
             long fact=1;
             for(int i=2;i<=n;i++){
