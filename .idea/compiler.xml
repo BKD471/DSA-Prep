@@ -10,10 +10,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DLC" />
+        <module name="HundreadDaysOfChallenge" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="DLC" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

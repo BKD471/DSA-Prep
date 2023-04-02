@@ -1,6 +1,10 @@
 package org.example.Day1;
 
 public class LongestBalncedSubSTRING {
+    //Intuition:
+    //loop through and count the count of consecutive zeros and then ones
+    //take the minumum of them  coz 00011  will give   0011 balanced
+    //return twice of the max count so far coz  00011-->4  Min(000->3 & 11 ->2)-->2*2-->4
     public int findTheLongestBalancedSubstring(String s) {
         int n=s.length();
         int mxCnt=0;

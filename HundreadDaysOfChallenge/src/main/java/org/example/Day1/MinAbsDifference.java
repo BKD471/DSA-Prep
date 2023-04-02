@@ -3,7 +3,9 @@ package org.example.Day1;
 import java.util.Arrays;
 
 public class MinAbsDifference {
-
+       //Intuition:
+       //sort the array first
+       //coz in sorted form ,differnce between two of the consecutive will be minimum
         public int solve(int[] A) {
             int n=A.length;
             int mn=Integer.MAX_VALUE;
