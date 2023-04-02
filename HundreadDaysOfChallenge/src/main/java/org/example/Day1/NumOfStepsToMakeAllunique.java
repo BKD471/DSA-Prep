@@ -14,6 +14,7 @@ public class NumOfStepsToMakeAllunique {
     // we need two steps to make [2,1] to [2,3]    1->2  in 1st step, 2->3 in 2nd step
     //so total ===> 1 steps when i=0, 2 steps when i=2  ===>1+2==3
     // so count+=A[i]-A[i+1]+1
+    //if(A[i]>A[i+1]) A[i+1] wil be updated to A{i}+1 coz it has to be greater than A[i]
     public int solve(int[] A) {
         int n=A.length,res=0;
         Arrays.sort(A);
