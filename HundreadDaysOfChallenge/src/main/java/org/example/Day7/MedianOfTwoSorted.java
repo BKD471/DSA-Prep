@@ -3,8 +3,6 @@ package org.example.Day7;
 public class MedianOfTwoSorted {
     public double findMedianSortedArrays(final List<Integer> a, final List<Integer> b) {
         int n=a.size(),m=b.size();
-        if(n==0) return b.get(0);
-        if(m==0) return a.get(0);
 
         if(n>m) return findMedianSortedArrays(b,a);
         int total=n+m+1;
