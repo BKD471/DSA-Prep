@@ -1,5 +1,7 @@
 package org.example.Day7;
 
+import java.util.List;
+
 public class MedianOfTwoSorted {
     public double findMedianSortedArrays(final List<Integer> a, final List<Integer> b) {
         int n=a.size(),m=b.size();
