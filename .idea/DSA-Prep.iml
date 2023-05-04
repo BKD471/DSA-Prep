@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Arrays/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Bits/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Greedy/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Graph" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
