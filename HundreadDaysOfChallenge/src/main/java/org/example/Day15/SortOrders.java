@@ -23,9 +23,12 @@ class CompareSort<String extends Comparable<String>> implements Comparator<List<
     }
 }
 
-public class SortOrders {
+public class
+SortOrders {
     public static  ArrayList<ArrayList<String>> solve(ArrayList<ArrayList<String>> A) {
         int n=A.size();
+
+
 
         for(int i=0;i<n;i++){
             CompareSort.hash.put(A.get(i),i);
