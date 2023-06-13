@@ -1,7 +1,10 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution5 {
 
+
+public class FrogJumpMemoized {
     public static int jump(int n,int[] heights,int[] memo){
 
         if(n==0) return 0;
@@ -21,12 +24,8 @@ class Solution5 {
         Arrays.fill(memo,-1);
         return jump(n-1,heights,memo);
     }
-
-}
-
-public class FrogJumpMemoized {
     public static void main(String[] args) {
         int[] heights={10,20,60,50,60};
-        System.out.println(Solution5.frogJump(5,heights));
+        System.out.println(frogJump(5,heights));
     }
 }

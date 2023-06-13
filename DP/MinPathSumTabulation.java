@@ -1,5 +1,6 @@
+package DP;
 
-class Solution21 {
+public class MinPathSumTabulation {
     public static int minPathSum(int[][] grid) {
         int m=grid.length;
         int n=grid[0].length;
@@ -20,8 +21,6 @@ class Solution21 {
         }
         return dp[m-1][n-1];
     }
-}
-public class MinPathSumTabulation {
     public static void main(String[] args) {
         int[][] grids={
                 {2,4,7},
@@ -29,6 +28,6 @@ public class MinPathSumTabulation {
                 {3,2,1}
         };
         //2->1->3->2->1  --9
-        System.out.println(Solution21.minPathSum(grids));
+        System.out.println(minPathSum(grids));
     }
 }

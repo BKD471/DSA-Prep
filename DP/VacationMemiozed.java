@@ -1,6 +1,9 @@
+package DP;
+
 import java.util.*;
 
-class Solve {
+
+public class VacationMemiozed{
     public static int lookUp(int day,int[][] paths,int lastTask,
                              int[][] memo){
 
@@ -25,10 +28,6 @@ class Solve {
         memo[day][lastTask]=maxi;
         return maxi;
     }
-}
-
-
-public class VacationMemiozed{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
@@ -44,7 +43,7 @@ public class VacationMemiozed{
         for(int i=0;i<paths.length;i++){
             Arrays.fill(memo[i],-1);
         }
-        System.out.println(Solve.lookUp(n-1,paths,lastTask,memo));
+        System.out.println(lookUp(n-1,paths,lastTask,memo));
     }
 }
 

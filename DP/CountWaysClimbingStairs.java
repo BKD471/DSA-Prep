@@ -1,5 +1,7 @@
+package DP;
 
-class Solution {
+
+public class CountWaysClimbingStairs {
     public static int climbIt(int n){
         int[] dp=new int[n+1];
         dp[0]=1;dp[1]=1;
@@ -11,10 +13,7 @@ class Solution {
     public static int climbStairs(int n) {
         return climbIt(n);
     }
-}
-
-public class CountWaysClimbingStairs {
     public static void main(String[] args) {
-        System.out.println(Solution.climbIt(8));
+        System.out.println(climbIt(8));
     }
 }

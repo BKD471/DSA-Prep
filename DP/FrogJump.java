@@ -1,8 +1,10 @@
+package DP;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-class Solution7 {
+public class FrogJump {
     public static boolean canCross(int[] stones) {
         int n=stones.length;
 
@@ -47,10 +49,8 @@ class Solution7 {
         }
         return false;
     }
-}
-public class FrogJump {
     public static void main(String[] args) {
         int stones[]={0,1,3,5,6,8,12,17};
-        System.out.println(Solution7.canCross(stones));
+        System.out.println(canCross(stones));
     }
 }

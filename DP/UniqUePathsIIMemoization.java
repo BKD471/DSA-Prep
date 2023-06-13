@@ -1,7 +1,10 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution17 {
 
+
+public class UniqUePathsIIMemoization {
     public static int lookUp(int row,int col,int[][] obstacleGrid,int[][] memo,int m,int n){
         if(memo[row][col]!=-1) return memo[row][col];
 
@@ -37,16 +40,12 @@ class Solution17 {
         }
         return lookUp(0,0,obstacleGrid,memo,m,n);
     }
-}
-
-
-public class UniqUePathsIIMemoization {
     public static void main(String[] args) {
         int[][] paths={
                 {0,0,0},
                 {0,1,0},
                 {0,0,0}
         };
-        System.out.println(Solution17.uniquePathsWithObstacles(paths));
+        System.out.println(uniquePathsWithObstacles(paths));
     }
 }

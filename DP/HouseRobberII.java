@@ -1,7 +1,11 @@
+package DP;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution10 {
+
+
+public class HouseRobberII {
     public static int rob(List<Integer> nums, int n) {
         int[] dp = new int[n];
         dp[0] = nums.get(0);
@@ -26,12 +30,8 @@ class Solution10 {
         }
         return Math.max(rob(temp1, temp1.size()), rob(temp2, temp2.size()));
     }
-}
-
-
-public class HouseRobberII {
     public static void main(String[] args) {
         int[] nums = {2, 3, 4, 5, 6};
-        System.out.println(Solution10.rob(nums));
+        System.out.println(rob(nums));
     }
 }

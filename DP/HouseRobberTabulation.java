@@ -1,5 +1,7 @@
+package DP;
 
-class Solution9 {
+
+public class HouseRobberTabulation {
     public static int rob(int[] nums) {
         int n=nums.length;
         int[] dp=new int[n];
@@ -14,11 +16,8 @@ class Solution9 {
         }
         return dp[n-1];
     }
-}
-
-public class HouseRobberTabulation {
     public static void main(String[] args) {
         int[] nums={2,7,9,3,1};
-        System.out.println(Solution9.rob(nums));
+        System.out.println(rob(nums));
     }
 }

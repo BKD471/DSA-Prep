@@ -1,4 +1,6 @@
-class Solution4 {
+package DP;
+
+public class FrogJumpTabulation {
     public static int frogJump(int n, int heights[]) {
         // Write your code here..
         int[] dp=new int[n];
@@ -11,11 +13,8 @@ class Solution4 {
         }
         return dp[n-1];
     }
-
-}
-public class FrogJumpTabulation {
     public static void main(String[] args) {
         int[] heights={10,20,60,50,60};
-        System.out.println(Solution4.frogJump(5,heights));
+        System.out.println(frogJump(5,heights));
     }
 }

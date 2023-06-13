@@ -1,7 +1,10 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution15 {
 
+
+public class UniquePathsMemo {
     public static long lookUp(int row,int col,long[][] memo,int m,int n){
         if(memo[row][col]!=-1) return memo[row][col];
 
@@ -29,11 +32,8 @@ class Solution15 {
         }
         return lookUp(0,0,memo,m,n);
     }
-}
-
-public class UniquePathsMemo {
     public static void main(String[] args) {
         int m=20,n=27;
-        System.out.println(Solution15.uniquePaths(m,n));
+        System.out.println(uniquePaths(m,n));
     }
 }

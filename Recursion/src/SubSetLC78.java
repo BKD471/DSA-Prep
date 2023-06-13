@@ -30,7 +30,7 @@ public class SubSetLC78 {
         int[] arr={2,3,6,7};
         List<List<Integer>> res=new ArrayList<>();
         List<Integer> temp=new ArrayList<>();
-        List<List<Integer>> ans=Solution5.subsets(arr);
+        List<List<Integer>> ans= Solution5DP.subsets(arr);
         //displayListOfList(ans);
 
         Map<Integer,Integer> mp=new HashMap<>();

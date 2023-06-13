@@ -1,4 +1,6 @@
-class Solution16 {
+package DP;
+
+public class UniquePathsTabulation {
     public static long uniquePaths(int m, int n) {
         long[][] dp=new long[m][n];
         dp[0][0]=1;
@@ -19,12 +21,8 @@ class Solution16 {
 
         return dp[m-1][n-1];
     }
-}
-
-
-public class UniquePathsTabulation {
     public static void main(String[] args) {
         int m=20,n=27;
-        System.out.println(Solution16.uniquePaths(m,n));
+        System.out.println(uniquePaths(m,n));
     }
 }

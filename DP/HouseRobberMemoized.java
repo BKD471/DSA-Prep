@@ -1,6 +1,9 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution8 {
+
+public class HouseRobberMemoized {
     static int maximizeProfit(int[] nums,int[] memo,int n){
 
         if(n<0) return 0;
@@ -18,11 +21,8 @@ class Solution8 {
         Arrays.fill(memo,-1);
         return maximizeProfit(nums,memo,n-1);
     }
-}
-
-public class HouseRobberMemoized {
     public static void main(String[] args) {
         int[] nums={2,7,9,3,1};
-        System.out.println(Solution8.rob(nums));
+        System.out.println(rob(nums));
     }
 }

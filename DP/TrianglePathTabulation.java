@@ -1,3 +1,5 @@
+package DP;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -6,7 +8,7 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
-class Solution22 {
+public class TrianglePathTabulation {
     public static int minimumTotal(List<List<Integer>> triangle) {
         int m=triangle.size();
         int n=triangle.get(m-1).size();
@@ -25,10 +27,6 @@ class Solution22 {
         }
         return dp[0][0];
     }
-}
-
-
-public class TrianglePathTabulation {
     public static void main(String[] args) {
        Integer[][] grids={{2},
                       {3,4},
@@ -37,6 +35,6 @@ public class TrianglePathTabulation {
         List<List<Integer>> listOfGrids = Arrays.stream(grids)  //'array' is two-dimensional
                 .map(Arrays::asList)
                 .collect(Collectors.toList());
-        System.out.println(Solution22.minimumTotal(listOfGrids));
+        System.out.println(minimumTotal(listOfGrids));
     }
 }

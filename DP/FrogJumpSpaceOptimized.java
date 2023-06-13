@@ -1,5 +1,6 @@
- class Solution6 {
+package DP;
 
+public class FrogJumpSpaceOptimized {
     public static int frogJump(int n, int heights[]) {
 
         // Write your code here..
@@ -15,13 +16,8 @@
         }
         return prev;
     }
-
-}
-
-
-public class FrogJumpSpaceOptimized {
     public static void main(String[] args) {
         int[] heights={10,20,60,50,60};
-        System.out.println(Solution6.frogJump(5,heights));
+        System.out.println(frogJump(5,heights));
     }
 }

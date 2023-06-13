@@ -1,6 +1,8 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution1 {
+public class CountWaysClimbingStairsMemoised {
     public static int climbIt(int n,int[] memo){
         if(memo[n]!=-1) return memo[n];
         if(n<=1) return 1;
@@ -13,10 +15,7 @@ class Solution1 {
         Arrays.fill(memo,-1);
         return climbIt(n,memo);
     }
-}
-
-public class CountWaysClimbingStairsMemoised {
     public static void main(String[] args) {
-        System.out.println(Solution1.climbStairs(8));
+        System.out.println(climbStairs(8));
     }
 }
