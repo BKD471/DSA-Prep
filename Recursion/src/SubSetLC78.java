@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Solution5 {
+public class SubSetLC78 {
     public static void subSets(List<List<Integer>> res, List<Integer> temp, int index, int[] nums){
         if(index==nums.length){
             res.add(new ArrayList<>(temp));
@@ -22,15 +22,11 @@ class Solution5 {
         subSets(res,temp,0,nums);
         return res;
     }
-}
-
-
-public class SubSetLC78 {
     public static void main(String[] args) {
         int[] arr={2,3,6,7};
         List<List<Integer>> res=new ArrayList<>();
         List<Integer> temp=new ArrayList<>();
-        List<List<Integer>> ans= Solution5DP.subsets(arr);
+        List<List<Integer>> ans= subsets(arr);
         //displayListOfList(ans);
 
         Map<Integer,Integer> mp=new HashMap<>();
