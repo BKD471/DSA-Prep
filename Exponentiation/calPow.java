@@ -33,7 +33,7 @@ public class calPow {
         return ans;
     }
     public static void main(String[] args) {
-        long a=2,b=31;
+        long a=3,b=13;
         long res1 = calPowBrute(a, b);
         long res2 = calPowOptimal(a, b);
         long res3=calPowOptimalIterative(a,b);
@@ -41,3 +41,17 @@ public class calPow {
         System.out.println(res3);
     }
 }
+
+/*
+
+  3^13
+
+  a               b      res
+  3               1101   1
+  9               110    3
+  81              11     3
+  81*81           1      3*81
+
+  (81*81)*(81&81) 0      3*81*81*81  =>1594323
+
+ */
