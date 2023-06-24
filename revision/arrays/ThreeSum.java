@@ -1,5 +1,9 @@
 package revision.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
+import  java.util.Arrays;
+
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         int n=nums.length;
