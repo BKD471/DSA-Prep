@@ -3,7 +3,7 @@ package treess;
 public class TreeNode {
     TreeNode left;
     TreeNode right;
-    private int val;
+    int val;
 
     TreeNode(int val){
         this.val=val;
