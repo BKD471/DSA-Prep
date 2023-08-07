@@ -35,3 +35,33 @@ public class PopulatingNextRightPointers {
         return root;
     }
 }
+class PopulatingNextPointersBest{
+    public Node connect(Node root) {
+        if(root==null) return root;
+
+        Node dummy=new Node(-1);
+        Node temp=dummy;
+
+        Node curr=root;
+        curr.next=null;
+        while(curr!=null){
+            if(curr.left!=null) {
+                temp.next=curr.left;
+                temp=temp.next;
+            }
+            if(curr.right!=null){
+                temp.next=curr.right;
+                temp=temp.next;
+            }
+            curr=curr.next;
+            if(curr==null){
+                curr=dummy.next;
+                dummy.next=null;
+                temp=dummy;
+            }
+        }
+
+        return root;
+    }
+    //tc O(n) sc O(1)
+}
