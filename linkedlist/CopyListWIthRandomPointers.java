@@ -35,4 +35,47 @@ public class CopyListWIthRandomPointers {
         }
         return head2;
     }
+
+    /*
+// Definition for a Node.
+class Node {
+    int val;
+    Node next;
+    Node random;
+
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
+    }
+}
+*/
+
+        public RandomListNode copyRandomListBetter(RandomListNode head) {
+            if(head==null) return head;
+
+            RandomListNode curr=head;
+            while(curr!=null){
+                RandomListNode after=curr.next;
+                RandomListNode temp=new RandomListNode(curr.label);
+                temp.next=after;
+                curr.next=temp;
+                curr=curr.next.next;
+            }
+
+            curr=head;
+            while(curr!=null){
+                if(curr.random!=null) curr.next.random=curr.random.next;
+                curr=curr.next.next;
+            }
+            curr=head;
+            RandomListNode headOfSecond=curr.next;
+            while(curr!=null){
+                RandomListNode next=curr.next;
+                curr.next=next.next;
+                curr=curr.next;
+                if(curr!=null) next.next=curr.next;
+            }
+            return headOfSecond;
+        }
 }
