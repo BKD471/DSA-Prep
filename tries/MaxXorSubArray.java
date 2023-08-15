@@ -1,0 +1,64 @@
+package tries;
+
+public class MaxXorSubArray {
+    private boolean checkBits(int nums,int index){
+        return (((nums>>index)&1)==1);
+    }
+
+    private void insert(TrieNodes root,int nums){
+        TrieNodes curr=root;
+        for(int i=31;i>=0;i--){
+            if(checkBits(nums,i)){
+                TrieNodes temp=new TrieNodes(1);
+                if(curr.children[1]==null) curr.children[1]=temp;
+                curr=curr.children[1];
+            }else{
+                TrieNodes temp=new TrieNodes(0);
+                if(curr.children[0]==null) curr.children[0]=temp;
+                curr=curr.children[0];
+            }
+        }
+    }
+    public int findMaxXor(int[] nums) {
+        int n=nums.length;
+        TrieNodes root=new TrieNodes(-1);
+        for(int i=0;i<n;i++){
+            insert(root,nums[i]);
+        }
+
+        int ans=0;
+        for(int i=0;i<n;i++){
+            TrieNodes curr=root;
+            int xor=0;
+            for(int j=31;j>=0;j--){
+                if(checkBits(nums[i],j)){
+                    if(curr.children[0]!=null){
+                        curr=curr.children[0];
+                        xor=(xor| (1<<j));
+                    }else{
+                        curr=curr.children[1];
+                    }
+                }else{
+                    if(curr.children[1]!=null){
+                        curr=curr.children[1];
+                        xor=(xor | (1<<j));
+                    }
+                    else{
+                        curr=curr.children[0];
+                    }
+                }
+            }
+            ans=Math.max(ans,xor);
+        }
+        return ans;
+    }
+
+    public  int findMaxXorSubArray(int[] nums){
+        int n=nums.length;
+        int[] xor=new int[n];
+
+        xor[0]=nums[0];
+        for(int i=1;i<n;i++) xor[i]=xor[i-1]^nums[i];
+        return findMaxXor(xor);
+    }
+}
