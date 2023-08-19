@@ -18,7 +18,6 @@ class Input {
     //lost of wastage
     public static void takeInputNoobWay() {
         Scanner sc = new Scanner(System.in);
-
         //edges and vertices (1 based indexing)
         int m = sc.nextInt();
         int n = sc.nextInt();
@@ -42,10 +41,8 @@ class Input {
     //better
     public static void takeInputBetterWay() {
         Scanner sc = new Scanner(System.in);
-
         //edges & vertices (1 based indexing)
         int m = sc.nextInt();
-        int n = sc.nextInt();
 
         List<ArrayList<Integer>> adjList = new ArrayList<>();
         for (int i = 0; i <= m; i++) adjList.add(new ArrayList<Integer>());
