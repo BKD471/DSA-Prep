@@ -1,4 +1,7 @@
-  public void swap(int[] nums,int l,int h){
+package revision.arrays;
+
+class Rotate{
+    public void swap(int[] nums,int l,int h){
         int t=nums[l];
         nums[l]=nums[h];
         nums[h]=t;
@@ -19,5 +22,6 @@
         reverse(nums,0,n-k-1);
         reverse(nums,n-k,n-1);
         reverse(nums,0,n-1);
-        return nums; 
+        return nums;
     }
+}

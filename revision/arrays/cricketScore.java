@@ -1,9 +1,12 @@
- public long[] cricketScore(int[] A, int[][] B) {
+package revision.arrays;
+
+class cricketScore{
+    public long[] cricketScore(int[] A, int[][] B) {
         int n=A.length;
         int m=B.length;
 
         long ps[]=new long[n];
-        ps[0]=A[0]; 
+        ps[0]=A[0];
         for(int i=1;i<n;i++) ps[i]=ps[i-1]+A[i];
 
         long[] res=new long[m];
@@ -15,3 +18,4 @@
 
         return res;
     }
+}

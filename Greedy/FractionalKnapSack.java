@@ -10,11 +10,11 @@ class Item{
     }
 }
 
-class Pair{
+class Pairsss {
     int weight;
     int price;
     double pricePerWeight;
-    Pair(int price,int weight,double pricePerWeight){
+    Pairsss(int price, int weight, double pricePerWeight){
         this.price=price;
         this.weight=weight;
         this.pricePerWeight=pricePerWeight;
@@ -24,11 +24,11 @@ public class FractionalKnapSack {
     double fractionalKnapsack(int W, Item arr[], int n)
     {
         // Your code here
-        Pair[] items=new Pair[n];
+        Pairsss[] items=new Pairsss[n];
 
         for(int i=0;i<n;i++) {
             double pricePerWeight=(double)(arr[i].value/arr[i].weight);
-            items[i]=new Pair(arr[i].value,arr[i].weight,pricePerWeight);
+            items[i]=new Pairsss(arr[i].value,arr[i].weight,pricePerWeight);
         }
 
         Arrays.sort(items,(a,b)-> (a.pricePerWeight>b.pricePerWeight)?-1

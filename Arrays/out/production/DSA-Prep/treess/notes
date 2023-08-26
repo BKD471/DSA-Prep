@@ -1,0 +1,12 @@
+
+Depth---> dist of node to its root node
+
+Height--> dist of root node to its farthest leaf node
+
+dist--> # nodes
+
+
+h  l
+3  0             1
+2  1        2         3
+1  2     4     5   6    7
