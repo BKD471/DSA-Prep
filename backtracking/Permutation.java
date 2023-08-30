@@ -21,7 +21,7 @@ public class Permutation {
         }
         for (int i = index; i < arr.size(); i++) {
             Collections.swap(arr, i, index);
-            printPermutation(arr, index + 1);
+            printPermutation(arr, i + 1);
             Collections.swap(arr, i, index);
         }
     }
