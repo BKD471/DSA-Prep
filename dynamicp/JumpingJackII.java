@@ -7,7 +7,8 @@ public class JumpingJackII {
         if(index==jumps.length-1) return 0;
         int jump=Integer.MAX_VALUE,minJump=Integer.MAX_VALUE;
         for(int i=1;i<=k;i++){
-            if(index+i<jumps.length) jump=Math.abs(jumps[index]-jumps[index+i])+minJumps(jumps,index+i,k);
+            if(index+i<jumps.length) jump=Math.abs(jumps[index]-jumps[index+i])
+                    +minJumps(jumps,index+i,k);
             minJump=Math.min(minJump,jump);
         }
         return minJump;
