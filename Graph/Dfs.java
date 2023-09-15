@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class Dfs {
-    public void dfs(ArrayList<Integer> res, boolean[] vis, ArrayList<ArrayList<Integer>> adj, int indx){
+    public void dfs(ArrayList<Integer> res, boolean[] vis,
+                    ArrayList<ArrayList<Integer>> adj, int indx){
         vis[indx]=true;
         res.add(indx);
         for(Integer i:adj.get(indx)){
