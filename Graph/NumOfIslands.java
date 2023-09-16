@@ -1,53 +1,34 @@
 import java.util.Arrays;
 
 public class NumOfIslands {
-    public void dfs(char[][] grid,boolean[][] visited,int row,int col,int m,int n){
+    private void dfs(char[][] grid,int i,int j,boolean[][] vis){
+        if(i<0 || j<0 || i>=grid.length || j>=grid[0].length) return;
+        vis[i][j]=true;
 
-        visited[row][col]=true;
-        //UP
-        if(row>0 && !visited[row-1][col] && grid[row-1][col]=='1'){
-            dfs(grid,visited,row-1,col,m,n);
-        }
+        //up
+        if(i>0 && !vis[i-1][j] && grid[i][j]=='1') dfs(grid,i-1,j,vis);
 
-        //DOWN
-        if(row<m-1 && !visited[row+1][col] && grid[row+1][col]=='1'){
-            dfs(grid,visited,row+1,col,m,n);
-        }
+        //down
+        if(i+1<grid.length && !vis[i+1][j] && grid[i][j]=='1') dfs(grid,i+1,j,vis);
 
+        //left
+        if(j>0 && !vis[i][j-1] && grid[i][j]=='1') dfs(grid,i,j-1,vis);
 
-        //Left
-        if(col>0 && !visited[row][col-1] && grid[row][col-1]=='1'){
-            dfs(grid,visited,row,col-1,m,n);
-        }
-
-        //Right
-        if(col<n-1 && !visited[row][col+1] && grid[row][col+1]=='1'){
-            dfs(grid,visited,row,col+1,m,n);
-        }
+        //right
+        if(j+1<grid[0].length && !vis[i][j+1] && grid[i][j]=='1') dfs(grid,i,j+1,vis);
     }
-
-    public int solve(char[][] grid,boolean[][] visited,int cnt,int m,int n){
-
+    public int numIslands(char[][] grid) {
+        int m=grid.length,n=grid[0].length;
+        int c=0;
+        boolean[][] vis=new boolean[m][n];
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                if(grid[i][j]=='1' && !visited[i][j]){
-                    dfs(grid,visited,i,j,m,n);
-                    cnt++;
+                if(!vis[i][j] && grid[i][j]=='1'){
+                    dfs(grid,i,j,vis);
+                    c++;
                 }
             }
         }
-
-        return cnt;
-    }
-
-    public int numIslands(char[][] grid) {
-        int m=grid.length;
-        int n=grid[0].length;
-        boolean[][] visited=new boolean[m][n];
-        for(boolean[] temp:visited){
-            Arrays.fill(temp,false);
-        }
-        int cnt=0;
-        return solve(grid,visited,cnt,m,n);
+        return c;
     }
 }
