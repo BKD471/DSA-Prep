@@ -3,17 +3,14 @@ import java.util.Arrays;
 public class MinCoin {
     private static final int LIMIT=(int)(Math.pow(10,9));
     private int solve(int[] nums,int index,int target,int[][] dp){
-        if(target<0) return LIMIT;
-        if(index==0){
-            if(target%nums[0]==0) return target/nums[index];
-            return LIMIT;
-        }
+        if(target==0) return 0;
+        if(index>=nums.length) return LIMIT;
         if(dp[index][target]!=-1) return dp[index][target];
 
-        int take=1+solve(nums,index,target-nums[index],dp);
+        int take=LIMIT;
+        if(target>=nums[index])  take=1+solve(nums,index,target-nums[index],dp);
         int non_take=solve(nums,index-1,target,dp);
         dp[index][target]=Math.min(take,non_take);
-
         return Math.min(take,non_take);
     }
 
