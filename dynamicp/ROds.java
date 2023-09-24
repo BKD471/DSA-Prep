@@ -1,10 +1,8 @@
 package dynamicp;
 
+import java.util.Arrays;
+
 public class ROds {
-
-import java.util.*;
-
-    public class Solution {
 
         private static int solve(int[] nums,int i,int n,int[][] memo){
             if(i>=nums.length) return 0;
@@ -24,5 +22,4 @@ import java.util.*;
             for(int i=0;i<=n;i++) Arrays.fill(memo[i],-1);
             return solve(price, 0, n,memo);
         }
-    }
 }
