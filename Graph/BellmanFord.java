@@ -1,32 +1,31 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 public class BellmanFord {
     private static final int LIMIT=(int)(Math.pow(10,8));
-    public static int[] bellmonFord(int n, int m, int src, List<List<Integer>> edges) {
+    public static int[] bellmonFord(int v, int m, int src, List<List<Integer>> edges) {
         // Write your code here.
-        int[] dist=new int[n+1];
-        for(int i=1;i<=n;i++) dist[i]=LIMIT;
+        int[] dist=new int[v];
+        Arrays.fill(dist,LIMIT);
         dist[src]=0;
-        boolean flag=false;
-        for(int i=0;i<n-1;i++){
+
+        boolean f=false;
+        for(int i=0;i<v;i++){
             for(List<Integer> temp:edges){
-                int u=temp.get(0);
-                int v=temp.get(1);
-                int w=temp.get(2);
-                if( dist[u]+w<dist[v]) dist[v]=dist[u]+w;
+                int u1=temp.get(0);
+                int v1=temp.get(1);
+                int w1=temp.get(2);
+                if(dist[u1]!=LIMIT && dist[u1]+w1<dist[v1]){
+                    if(i==v-1){
+                        f=true;
+                        break;
+                    }
+                    dist[v1]=dist[u1]+w1;
+                }
             }
         }
 
-        for(List<Integer> temp:edges){
-            int u=temp.get(0);
-            int v=temp.get(1);
-            int w=temp.get(2);
-            if( dist[u]+w<dist[v]) {
-                int[] t=new int[1];
-                t[0]=-1;
-                return t;
-            }
-        }
+        if(f) return new int[]{-1};
         return dist;
     }
 }
