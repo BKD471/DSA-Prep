@@ -33,3 +33,38 @@ public class DisJoinSet {
     }
 
 }
+
+
+class DisJointBySize{
+    List<Integer> size=new ArrayList<>();
+    List<Integer> parent=new ArrayList<>();
+
+    DisJointBySize(int n){
+        for(int i=0;i<n;i++){
+            size.add(1);
+            parent.add(i);
+        }
+    }
+
+    public int findParent(int u){
+        if(parent.get(u)==u) return u;
+        int up=findParent(parent.get(u));
+        parent.set(u,up);
+        return up;
+    }
+
+    public void union(int u,int v){
+        int up=findParent(u);
+        int vp=findParent(v);
+        if(up==vp) return;
+
+        if(size.get(up)<size.get(vp)){
+            parent.set(up,vp);
+            size.set(vp,size.get(up)+size.get(vp));
+        }else{
+            parent.set(vp,up);
+            size.set(up,size.get(up)+size.get(vp));
+        }
+    }
+}
+
