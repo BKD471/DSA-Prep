@@ -3,25 +3,24 @@ package dynamicp;
 import java.util.Arrays;
 
 public class NinjaRider {
-    private static int solve(int[][] grid,int flag,int index,int[][] memo){
-        if(index>=grid.length) return 0;
-        int mxVal=Integer.MIN_VALUE;
+    private static final int limit=(int)(-Math.pow(10,6)+7);
+    private static int ninja(int[][] points,int row,int prev_index,int n,int[][] memo){
+        if(row>=n) return 0;
 
-        if(memo[flag][index]!=-1) return memo[flag][index];
-        for(int j=0;j<3;j++){
-            int val=Integer.MIN_VALUE;
-            if(j!=flag) val=grid[index][j]+solve(grid,j,index+1,memo);
-            mxVal=Math.max(mxVal,val);
+        if(memo[row][prev_index+1]!=-1) return memo[row][prev_index+1];
+        int max_take=limit;
+        for(int i=0;i<3;i++){
+            int take=limit;
+            if(prev_index==-1 || prev_index!=i) take=points[row][i]+ninja(points, row+1, i, n,memo);
+            max_take=Math.max(max_take,take);
         }
-
-        memo[flag][index]=mxVal;
-        return mxVal;
+        memo[row][prev_index+1]=max_take;
+        return max_take;
     }
-    public static void main(String[] args) {
-        int[][] grid={{1,2,5},{3,1,1},{3,3,3}};
-        int[][] memo=new int[3][grid.length+1];
-        for(int i=0;i<3;i++) Arrays.fill(memo[i],-1);
-        System.out.println(solve(grid,0,0,memo));
+    public static int ninjaTraining(int n, int points[][]) {
+        int[][] memo=new int[n+1][4];
+        for(int i=0;i<=n;i++) Arrays.fill(memo[i], -1);
+        return ninja(points, 0, -1, n,memo);
     }
 }
 
