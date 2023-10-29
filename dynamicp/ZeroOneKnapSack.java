@@ -4,12 +4,9 @@ public class ZeroOneKnapSack {
     private static int solve(int[] values,int[] weights,int target,int index,int[][] memo){
         if(index>=values.length) return 0;
 
-
         if(memo[target][index]!=-1) return memo[target][index];
-
         int take=Integer.MIN_VALUE;
         if(target>=weights[index]) take=values[index]+solve(values,weights,target-weights[index],index+1,memo);
-
         int non_take=solve(values,weights,target,index+1,memo);
         memo[target][index]=Math.max(take,non_take);
         return memo[target][index];
