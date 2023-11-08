@@ -46,5 +46,5 @@ public class ShortestPathINBinaryMaze {
             if(dist[m-1][m-1]==LIMIT) return -1;
             return dist[m-1][m-1];
         }
-    }
 }
+
