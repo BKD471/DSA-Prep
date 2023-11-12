@@ -1,4 +1,4 @@
-package distnaces;
+package shortestpath;
 
 import java.util.ArrayList;
 import java.util.Comparator;
