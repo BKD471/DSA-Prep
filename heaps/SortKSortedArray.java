@@ -4,23 +4,19 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 public class SortKSortedArray {
-    ArrayList<Integer> nearlySorted(int arr[], int n, int k)
-    {
-        // your code here
-        ArrayList<Integer> res=new ArrayList<>();
-        if(n==0) return res;
+
+    public static int[] nearlySorted(int[] arr, int n, int k) {
+        // Write your code here.
         PriorityQueue<Integer> pq=new PriorityQueue<>();
-        for(int i=0;i<=k;i++) pq.offer(arr[i]);
 
-        res.add(pq.poll());
-        for(int i=k+1;i<n;i++){
+        int[] res=new int[n];
+        int index=0;
+        for(int i=0;i<n;i++){
             pq.offer(arr[i]);
-            res.add(pq.poll());
+            if(pq.size()>k) res[index++]=pq.poll();
         }
-
-        while(!pq.isEmpty()) res.add(pq.poll());
+        while(!pq.isEmpty()) res[index++]=pq.poll();
         return res;
     }
-
     // lgk+(n-k)lgk+k*lgk
 }
